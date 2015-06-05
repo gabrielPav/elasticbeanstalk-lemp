@@ -6,7 +6,7 @@ By default PHP on Elastic Beanstalk runs on Apache, which is also a dependancy o
 
 ## Example installation
 
-1. Create a new EC2 instance using any preconfigured PHP Beanstalk instances (use "Launch More Like This" EC2 command);
+1. Create a new EC2 instance using any preconfigured PHP Beanstalk images (use "Launch More Like This" EC2 command);
 2. SSH into the instance as root and run the script:
 
 ```bash
