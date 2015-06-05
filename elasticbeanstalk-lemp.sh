@@ -65,6 +65,8 @@ sed -i 's/display_errors = On/display_errors = Off/g' /etc/php.ini
 # Stop Apache
 service httpd stop
 
+sleep 5
+
 # Replace the httpd process with an empty process
 mv /usr/sbin/httpd /usr/sbin/httpd.disabled
 touch /usr/sbin/httpd
@@ -79,6 +81,5 @@ service nginx start
 service php-fpm start
 chkconfig nginx on
 chkconfig php-fpm on
-php -v
 
-echo 'Done.'
+echo "COMPLETE."
