@@ -8,11 +8,12 @@ By default PHP on Elastic Beanstalk runs on Apache, which is also a dependancy o
 
 1. Create a new EC2 instance using any preconfigured PHP Beanstalk images (use "Launch More Like This" EC2 command);
 2. SSH into the instance as root and run the script:
-3. Exit SSH, and create AMI image from the customized instance;
-4. Set your EB application's custom AMI ID to the new image and save the configuration.
 
 ```bash
 wget https://raw.githubusercontent.com/gabrielPav/elasticbeanstalk-lemp/master/elasticbeanstalk-lemp.sh
 chmod +x elasticbeanstalk-lemp.sh
 bash elasticbeanstalk-lemp.sh
 ```
+
+3. Exit SSH, and create AMI image from the customized instance;
+4. Set your EB application's custom AMI ID to the new image and save the configuration.
