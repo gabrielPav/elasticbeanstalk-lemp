@@ -1,2 +1,19 @@
-# elasticbeanstalk-lemp
-AWS Elastic Beanstalk with NGINX and PHP-FPM
+# AWS Elastic Beanstalk with Nginx / PHP-FPM 
+
+## Overview
+
+By default PHP on Elastic Beanstalk runs on Apache, which is also a dependancy of Hostmanager. The goal of this project is to provide an easy way to replace Apache with Nginx / PHP-FPM. To use, transfer the build script onto a fresh Beanstalk AMI instance, and execute elasticbeanstalk-lemp.sh script.
+
+## Example installation
+
+1. Create a new EC2 instance using any preconfigured PHP Beanstalk AMI;
+2. SSH into the instance as root and run the script:
+
+```bash
+wget https://raw.githubusercontent.com/gabrielPav/elasticbeanstalk-lemp/master/elasticbeanstalk-lemp.sh
+chmod +x elasticbeanstalk-lemp.sh
+bash elasticbeanstalk-lemp.sh
+```
+
+3. Exit SSH, and create AMI image from the new customized instance;
+4. Set your application's custom AMI ID to the new image and save the EB configuration.
