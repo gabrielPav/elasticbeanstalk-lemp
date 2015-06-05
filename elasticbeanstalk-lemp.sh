@@ -62,6 +62,9 @@ sed -i 's/display_errors = On/display_errors = Off/g' /etc/php.ini
 /bin/rm -rf /root/ngx_pagespeed-release-1.9.32.3-beta
 /bin/rm -rf /root/release-1.9.32.3-beta.zip
 
+# Stop Apache
+service httpd stop
+
 # Replace the httpd process with an empty process
 mv /usr/sbin/httpd /usr/sbin/httpd.disabled
 touch /usr/sbin/httpd
