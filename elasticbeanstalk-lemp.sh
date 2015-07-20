@@ -7,10 +7,10 @@ if [ $(id -u) != "0" ]; then
 fi
 
 # Install Nginx and ngx_pagespeed dependencies
-yum -y install wget zip unzip openssl openssl-devel gcc-c++ pcre-dev pcre-devel zlib-devel make
+yum -y install wget zip unzip openssl openssl-devel git gcc-c++ pcre-dev pcre-devel zlib-devel make
 
 # Install ngx_pagespeed module
-NPS_VERSION=1.9.32.3
+NPS_VERSION=1.9.32.4
 wget https://github.com/pagespeed/ngx_pagespeed/archive/release-${NPS_VERSION}-beta.zip
 unzip release-${NPS_VERSION}-beta.zip
 cd ngx_pagespeed-release-${NPS_VERSION}-beta/
@@ -59,8 +59,8 @@ sed -i 's/display_errors = On/display_errors = Off/g' /etc/php.ini
 # Remove install files
 /bin/rm -rf /root/nginx-1.8.0
 /bin/rm -rf /root/nginx-1.8.0.tar.gz
-/bin/rm -rf /root/ngx_pagespeed-release-1.9.32.3-beta
-/bin/rm -rf /root/release-1.9.32.3-beta.zip
+/bin/rm -rf /root/ngx_pagespeed-release-1.9.32.4-beta
+/bin/rm -rf /root/release-1.9.32.4-beta.zip
 
 # Stop Apache
 service httpd stop
